@@ -1,0 +1,28 @@
+--open terminal then:
+
+docker login
+amirbahador
+myjava12345
+
+cd C:\Users\amirs\IdeaProjects\Docker-DesktopApp\src
+docker build -t java-app .
+
+docker run java-app
+
+
+docker run --rm -it -p 8081:8081 java-app
+
+
+--for get docker containers
+docker ps --all
+
+
+--for kill docker containers
+docker kill $(docker ps -q)
+
+
+--for start and stop (java-app is name in the 'docker ps' command)
+docker start java-app
+
+--for show logs 
+docker logs java-app
